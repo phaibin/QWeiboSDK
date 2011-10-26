@@ -1,0 +1,446 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		3514F0E31457A0F50054812F /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3514F0E21457A0F50054812F /* Cocoa.framework */; };
+		3514F0ED1457A0F50054812F /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 3514F0EB1457A0F50054812F /* InfoPlist.strings */; };
+		3514F10A1457A2C00054812F /* NSData+QBase64.h in Headers */ = {isa = PBXBuildFile; fileRef = 3514F0F81457A2C00054812F /* NSData+QBase64.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		3514F10B1457A2C00054812F /* NSData+QBase64.m in Sources */ = {isa = PBXBuildFile; fileRef = 3514F0F91457A2C00054812F /* NSData+QBase64.m */; };
+		3514F10C1457A2C00054812F /* NSString+QEncoding.h in Headers */ = {isa = PBXBuildFile; fileRef = 3514F0FA1457A2C00054812F /* NSString+QEncoding.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		3514F10D1457A2C00054812F /* NSString+QEncoding.m in Sources */ = {isa = PBXBuildFile; fileRef = 3514F0FB1457A2C00054812F /* NSString+QEncoding.m */; };
+		3514F10E1457A2C00054812F /* NSURL+QAdditions.h in Headers */ = {isa = PBXBuildFile; fileRef = 3514F0FC1457A2C00054812F /* NSURL+QAdditions.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		3514F10F1457A2C00054812F /* NSURL+QAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 3514F0FD1457A2C00054812F /* NSURL+QAdditions.m */; };
+		3514F1101457A2C00054812F /* QAsyncHttp.h in Headers */ = {isa = PBXBuildFile; fileRef = 3514F0FE1457A2C00054812F /* QAsyncHttp.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		3514F1111457A2C00054812F /* QAsyncHttp.m in Sources */ = {isa = PBXBuildFile; fileRef = 3514F0FF1457A2C00054812F /* QAsyncHttp.m */; };
+		3514F1121457A2C00054812F /* QMutableURLRequest.h in Headers */ = {isa = PBXBuildFile; fileRef = 3514F1001457A2C00054812F /* QMutableURLRequest.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		3514F1131457A2C00054812F /* QMutableURLRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 3514F1011457A2C00054812F /* QMutableURLRequest.m */; };
+		3514F1141457A2C00054812F /* QOauth.h in Headers */ = {isa = PBXBuildFile; fileRef = 3514F1021457A2C00054812F /* QOauth.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		3514F1151457A2C00054812F /* QOauth.m in Sources */ = {isa = PBXBuildFile; fileRef = 3514F1031457A2C00054812F /* QOauth.m */; };
+		3514F1161457A2C00054812F /* QOauthKey.h in Headers */ = {isa = PBXBuildFile; fileRef = 3514F1041457A2C00054812F /* QOauthKey.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		3514F1171457A2C00054812F /* QOauthKey.m in Sources */ = {isa = PBXBuildFile; fileRef = 3514F1051457A2C00054812F /* QOauthKey.m */; };
+		3514F1181457A2C00054812F /* QSyncHttp.h in Headers */ = {isa = PBXBuildFile; fileRef = 3514F1061457A2C00054812F /* QSyncHttp.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		3514F1191457A2C00054812F /* QSyncHttp.m in Sources */ = {isa = PBXBuildFile; fileRef = 3514F1071457A2C00054812F /* QSyncHttp.m */; };
+		3514F11A1457A2C00054812F /* QWeiboRequest.h in Headers */ = {isa = PBXBuildFile; fileRef = 3514F1081457A2C00054812F /* QWeiboRequest.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		3514F11B1457A2C00054812F /* QWeiboRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 3514F1091457A2C00054812F /* QWeiboRequest.m */; };
+		3514F1201457A2DA0054812F /* JSONURLConnection.h in Headers */ = {isa = PBXBuildFile; fileRef = 3514F11C1457A2DA0054812F /* JSONURLConnection.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		3514F1211457A2DA0054812F /* JSONURLConnection.m in Sources */ = {isa = PBXBuildFile; fileRef = 3514F11D1457A2DA0054812F /* JSONURLConnection.m */; };
+		3514F1221457A2DA0054812F /* QWeiboAsyncApi.h in Headers */ = {isa = PBXBuildFile; fileRef = 3514F11E1457A2DA0054812F /* QWeiboAsyncApi.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		3514F1231457A2DA0054812F /* QWeiboAsyncApi.m in Sources */ = {isa = PBXBuildFile; fileRef = 3514F11F1457A2DA0054812F /* QWeiboAsyncApi.m */; };
+		3514F1301457A38F0054812F /* YAJL.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3514F12F1457A38F0054812F /* YAJL.framework */; };
+		3514F1381457A3EF0054812F /* QWPerson.h in Headers */ = {isa = PBXBuildFile; fileRef = 3514F1341457A3EF0054812F /* QWPerson.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		3514F1391457A3EF0054812F /* QWPerson.m in Sources */ = {isa = PBXBuildFile; fileRef = 3514F1351457A3EF0054812F /* QWPerson.m */; };
+		3514F13A1457A3EF0054812F /* QWMessage.h in Headers */ = {isa = PBXBuildFile; fileRef = 3514F1361457A3EF0054812F /* QWMessage.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		3514F13B1457A3EF0054812F /* QWMessage.m in Sources */ = {isa = PBXBuildFile; fileRef = 3514F1371457A3EF0054812F /* QWMessage.m */; };
+		3514F13F1457A4740054812F /* NSAttributedString+Hyperlink.h in Headers */ = {isa = PBXBuildFile; fileRef = 3514F13D1457A4740054812F /* NSAttributedString+Hyperlink.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		3514F1401457A4740054812F /* NSAttributedString+Hyperlink.m in Sources */ = {isa = PBXBuildFile; fileRef = 3514F13E1457A4740054812F /* NSAttributedString+Hyperlink.m */; };
+		3514F1431457A5370054812F /* NSObject+Universal.h in Headers */ = {isa = PBXBuildFile; fileRef = 3514F1411457A5370054812F /* NSObject+Universal.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		3514F1441457A5370054812F /* NSObject+Universal.m in Sources */ = {isa = PBXBuildFile; fileRef = 3514F1421457A5370054812F /* NSObject+Universal.m */; };
+		3514F1471457A5580054812F /* NSImage+Categories.h in Headers */ = {isa = PBXBuildFile; fileRef = 3514F1451457A5580054812F /* NSImage+Categories.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		3514F1481457A5580054812F /* NSImage+Categories.m in Sources */ = {isa = PBXBuildFile; fileRef = 3514F1461457A5580054812F /* NSImage+Categories.m */; };
+		3514F14B1457A58F0054812F /* NSDate+Categories.h in Headers */ = {isa = PBXBuildFile; fileRef = 3514F1491457A58F0054812F /* NSDate+Categories.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		3514F14C1457A58F0054812F /* NSDate+Categories.m in Sources */ = {isa = PBXBuildFile; fileRef = 3514F14A1457A58F0054812F /* NSDate+Categories.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		3514F0DF1457A0F50054812F /* QWeiboSDK.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = QWeiboSDK.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		3514F0E21457A0F50054812F /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
+		3514F0E51457A0F50054812F /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = System/Library/Frameworks/AppKit.framework; sourceTree = SDKROOT; };
+		3514F0E61457A0F50054812F /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
+		3514F0E71457A0F50054812F /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		3514F0EA1457A0F50054812F /* QWeiboSDK-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "QWeiboSDK-Info.plist"; sourceTree = "<group>"; };
+		3514F0EC1457A0F50054812F /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		3514F0EE1457A0F50054812F /* QWeiboSDK-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "QWeiboSDK-Prefix.pch"; sourceTree = "<group>"; };
+		3514F0F81457A2C00054812F /* NSData+QBase64.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSData+QBase64.h"; sourceTree = "<group>"; };
+		3514F0F91457A2C00054812F /* NSData+QBase64.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSData+QBase64.m"; sourceTree = "<group>"; };
+		3514F0FA1457A2C00054812F /* NSString+QEncoding.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+QEncoding.h"; sourceTree = "<group>"; };
+		3514F0FB1457A2C00054812F /* NSString+QEncoding.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+QEncoding.m"; sourceTree = "<group>"; };
+		3514F0FC1457A2C00054812F /* NSURL+QAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSURL+QAdditions.h"; sourceTree = "<group>"; };
+		3514F0FD1457A2C00054812F /* NSURL+QAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSURL+QAdditions.m"; sourceTree = "<group>"; };
+		3514F0FE1457A2C00054812F /* QAsyncHttp.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QAsyncHttp.h; sourceTree = "<group>"; };
+		3514F0FF1457A2C00054812F /* QAsyncHttp.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QAsyncHttp.m; sourceTree = "<group>"; };
+		3514F1001457A2C00054812F /* QMutableURLRequest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QMutableURLRequest.h; sourceTree = "<group>"; };
+		3514F1011457A2C00054812F /* QMutableURLRequest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QMutableURLRequest.m; sourceTree = "<group>"; };
+		3514F1021457A2C00054812F /* QOauth.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QOauth.h; sourceTree = "<group>"; };
+		3514F1031457A2C00054812F /* QOauth.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QOauth.m; sourceTree = "<group>"; };
+		3514F1041457A2C00054812F /* QOauthKey.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QOauthKey.h; sourceTree = "<group>"; };
+		3514F1051457A2C00054812F /* QOauthKey.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QOauthKey.m; sourceTree = "<group>"; };
+		3514F1061457A2C00054812F /* QSyncHttp.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QSyncHttp.h; sourceTree = "<group>"; };
+		3514F1071457A2C00054812F /* QSyncHttp.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QSyncHttp.m; sourceTree = "<group>"; };
+		3514F1081457A2C00054812F /* QWeiboRequest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QWeiboRequest.h; sourceTree = "<group>"; };
+		3514F1091457A2C00054812F /* QWeiboRequest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QWeiboRequest.m; sourceTree = "<group>"; };
+		3514F11C1457A2DA0054812F /* JSONURLConnection.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSONURLConnection.h; sourceTree = "<group>"; };
+		3514F11D1457A2DA0054812F /* JSONURLConnection.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JSONURLConnection.m; sourceTree = "<group>"; };
+		3514F11E1457A2DA0054812F /* QWeiboAsyncApi.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QWeiboAsyncApi.h; sourceTree = "<group>"; };
+		3514F11F1457A2DA0054812F /* QWeiboAsyncApi.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QWeiboAsyncApi.m; sourceTree = "<group>"; };
+		3514F12F1457A38F0054812F /* YAJL.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = YAJL.framework; path = QWeiboSDK/Frameworks/YAJL.framework; sourceTree = "<group>"; };
+		3514F1341457A3EF0054812F /* QWPerson.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QWPerson.h; sourceTree = "<group>"; };
+		3514F1351457A3EF0054812F /* QWPerson.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QWPerson.m; sourceTree = "<group>"; };
+		3514F1361457A3EF0054812F /* QWMessage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QWMessage.h; sourceTree = "<group>"; };
+		3514F1371457A3EF0054812F /* QWMessage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QWMessage.m; sourceTree = "<group>"; };
+		3514F13D1457A4740054812F /* NSAttributedString+Hyperlink.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSAttributedString+Hyperlink.h"; sourceTree = "<group>"; };
+		3514F13E1457A4740054812F /* NSAttributedString+Hyperlink.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSAttributedString+Hyperlink.m"; sourceTree = "<group>"; };
+		3514F1411457A5370054812F /* NSObject+Universal.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+Universal.h"; sourceTree = "<group>"; };
+		3514F1421457A5370054812F /* NSObject+Universal.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+Universal.m"; sourceTree = "<group>"; };
+		3514F1451457A5580054812F /* NSImage+Categories.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSImage+Categories.h"; sourceTree = "<group>"; };
+		3514F1461457A5580054812F /* NSImage+Categories.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSImage+Categories.m"; sourceTree = "<group>"; };
+		3514F1491457A58F0054812F /* NSDate+Categories.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDate+Categories.h"; sourceTree = "<group>"; };
+		3514F14A1457A58F0054812F /* NSDate+Categories.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDate+Categories.m"; sourceTree = "<group>"; };
+		3514F14D1457A5FA0054812F /* QWConstants.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QWConstants.h; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		3514F0DB1457A0F50054812F /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3514F0E31457A0F50054812F /* Cocoa.framework in Frameworks */,
+				3514F1301457A38F0054812F /* YAJL.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		3514F0D31457A0F50054812F = {
+			isa = PBXGroup;
+			children = (
+				3514F0E81457A0F50054812F /* QWeiboSDK */,
+				3514F0E11457A0F50054812F /* Frameworks */,
+				3514F0E01457A0F50054812F /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		3514F0E01457A0F50054812F /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				3514F0DF1457A0F50054812F /* QWeiboSDK.framework */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		3514F0E11457A0F50054812F /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				3514F12F1457A38F0054812F /* YAJL.framework */,
+				3514F0E21457A0F50054812F /* Cocoa.framework */,
+				3514F0E41457A0F50054812F /* Other Frameworks */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		3514F0E41457A0F50054812F /* Other Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				3514F0E51457A0F50054812F /* AppKit.framework */,
+				3514F0E61457A0F50054812F /* CoreData.framework */,
+				3514F0E71457A0F50054812F /* Foundation.framework */,
+			);
+			name = "Other Frameworks";
+			sourceTree = "<group>";
+		};
+		3514F0E81457A0F50054812F /* QWeiboSDK */ = {
+			isa = PBXGroup;
+			children = (
+				3514F13C1457A4360054812F /* Categories */,
+				3514F1331457A3E70054812F /* Model */,
+				3514F0F81457A2C00054812F /* NSData+QBase64.h */,
+				3514F0F91457A2C00054812F /* NSData+QBase64.m */,
+				3514F0FA1457A2C00054812F /* NSString+QEncoding.h */,
+				3514F0FB1457A2C00054812F /* NSString+QEncoding.m */,
+				3514F0FC1457A2C00054812F /* NSURL+QAdditions.h */,
+				3514F0FD1457A2C00054812F /* NSURL+QAdditions.m */,
+				3514F0FE1457A2C00054812F /* QAsyncHttp.h */,
+				3514F0FF1457A2C00054812F /* QAsyncHttp.m */,
+				3514F1001457A2C00054812F /* QMutableURLRequest.h */,
+				3514F1011457A2C00054812F /* QMutableURLRequest.m */,
+				3514F1021457A2C00054812F /* QOauth.h */,
+				3514F1031457A2C00054812F /* QOauth.m */,
+				3514F1041457A2C00054812F /* QOauthKey.h */,
+				3514F1051457A2C00054812F /* QOauthKey.m */,
+				3514F1061457A2C00054812F /* QSyncHttp.h */,
+				3514F1071457A2C00054812F /* QSyncHttp.m */,
+				3514F1081457A2C00054812F /* QWeiboRequest.h */,
+				3514F1091457A2C00054812F /* QWeiboRequest.m */,
+				3514F11C1457A2DA0054812F /* JSONURLConnection.h */,
+				3514F11D1457A2DA0054812F /* JSONURLConnection.m */,
+				3514F11E1457A2DA0054812F /* QWeiboAsyncApi.h */,
+				3514F11F1457A2DA0054812F /* QWeiboAsyncApi.m */,
+				3514F0E91457A0F50054812F /* Supporting Files */,
+			);
+			path = QWeiboSDK;
+			sourceTree = "<group>";
+		};
+		3514F0E91457A0F50054812F /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				3514F14D1457A5FA0054812F /* QWConstants.h */,
+				3514F0EA1457A0F50054812F /* QWeiboSDK-Info.plist */,
+				3514F0EB1457A0F50054812F /* InfoPlist.strings */,
+				3514F0EE1457A0F50054812F /* QWeiboSDK-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		3514F1331457A3E70054812F /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				3514F1341457A3EF0054812F /* QWPerson.h */,
+				3514F1351457A3EF0054812F /* QWPerson.m */,
+				3514F1361457A3EF0054812F /* QWMessage.h */,
+				3514F1371457A3EF0054812F /* QWMessage.m */,
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
+		3514F13C1457A4360054812F /* Categories */ = {
+			isa = PBXGroup;
+			children = (
+				3514F13D1457A4740054812F /* NSAttributedString+Hyperlink.h */,
+				3514F13E1457A4740054812F /* NSAttributedString+Hyperlink.m */,
+				3514F1411457A5370054812F /* NSObject+Universal.h */,
+				3514F1421457A5370054812F /* NSObject+Universal.m */,
+				3514F1451457A5580054812F /* NSImage+Categories.h */,
+				3514F1461457A5580054812F /* NSImage+Categories.m */,
+				3514F1491457A58F0054812F /* NSDate+Categories.h */,
+				3514F14A1457A58F0054812F /* NSDate+Categories.m */,
+			);
+			name = Categories;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		3514F0DC1457A0F50054812F /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3514F1381457A3EF0054812F /* QWPerson.h in Headers */,
+				3514F13A1457A3EF0054812F /* QWMessage.h in Headers */,
+				3514F1201457A2DA0054812F /* JSONURLConnection.h in Headers */,
+				3514F10A1457A2C00054812F /* NSData+QBase64.h in Headers */,
+				3514F10C1457A2C00054812F /* NSString+QEncoding.h in Headers */,
+				3514F10E1457A2C00054812F /* NSURL+QAdditions.h in Headers */,
+				3514F1101457A2C00054812F /* QAsyncHttp.h in Headers */,
+				3514F1121457A2C00054812F /* QMutableURLRequest.h in Headers */,
+				3514F1141457A2C00054812F /* QOauth.h in Headers */,
+				3514F1161457A2C00054812F /* QOauthKey.h in Headers */,
+				3514F1181457A2C00054812F /* QSyncHttp.h in Headers */,
+				3514F1221457A2DA0054812F /* QWeiboAsyncApi.h in Headers */,
+				3514F13F1457A4740054812F /* NSAttributedString+Hyperlink.h in Headers */,
+				3514F1431457A5370054812F /* NSObject+Universal.h in Headers */,
+				3514F1471457A5580054812F /* NSImage+Categories.h in Headers */,
+				3514F14B1457A58F0054812F /* NSDate+Categories.h in Headers */,
+				3514F11A1457A2C00054812F /* QWeiboRequest.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		3514F0DE1457A0F50054812F /* QWeiboSDK */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 3514F0F41457A0F50054812F /* Build configuration list for PBXNativeTarget "QWeiboSDK" */;
+			buildPhases = (
+				3514F0DA1457A0F50054812F /* Sources */,
+				3514F0DB1457A0F50054812F /* Frameworks */,
+				3514F0DC1457A0F50054812F /* Headers */,
+				3514F0DD1457A0F50054812F /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = QWeiboSDK;
+			productName = QWeiboSDK;
+			productReference = 3514F0DF1457A0F50054812F /* QWeiboSDK.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		3514F0D51457A0F50054812F /* Project object */ = {
+			isa = PBXProject;
+			buildConfigurationList = 3514F0D81457A0F50054812F /* Build configuration list for PBXProject "QWeiboSDK" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 3514F0D31457A0F50054812F;
+			productRefGroup = 3514F0E01457A0F50054812F /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				3514F0DE1457A0F50054812F /* QWeiboSDK */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		3514F0DD1457A0F50054812F /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3514F0ED1457A0F50054812F /* InfoPlist.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		3514F0DA1457A0F50054812F /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3514F10B1457A2C00054812F /* NSData+QBase64.m in Sources */,
+				3514F10D1457A2C00054812F /* NSString+QEncoding.m in Sources */,
+				3514F10F1457A2C00054812F /* NSURL+QAdditions.m in Sources */,
+				3514F1111457A2C00054812F /* QAsyncHttp.m in Sources */,
+				3514F1131457A2C00054812F /* QMutableURLRequest.m in Sources */,
+				3514F1151457A2C00054812F /* QOauth.m in Sources */,
+				3514F1171457A2C00054812F /* QOauthKey.m in Sources */,
+				3514F1191457A2C00054812F /* QSyncHttp.m in Sources */,
+				3514F11B1457A2C00054812F /* QWeiboRequest.m in Sources */,
+				3514F1211457A2DA0054812F /* JSONURLConnection.m in Sources */,
+				3514F1231457A2DA0054812F /* QWeiboAsyncApi.m in Sources */,
+				3514F1391457A3EF0054812F /* QWPerson.m in Sources */,
+				3514F13B1457A3EF0054812F /* QWMessage.m in Sources */,
+				3514F1401457A4740054812F /* NSAttributedString+Hyperlink.m in Sources */,
+				3514F1441457A5370054812F /* NSObject+Universal.m in Sources */,
+				3514F1481457A5580054812F /* NSImage+Categories.m in Sources */,
+				3514F14C1457A58F0054812F /* NSDate+Categories.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		3514F0EB1457A0F50054812F /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				3514F0EC1457A0F50054812F /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		3514F0F21457A0F50054812F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				INSTALL_PATH = "@executable_path/../Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = "@loader_path/../Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 10.7;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+			};
+			name = Debug;
+		};
+		3514F0F31457A0F50054812F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
+				COPY_PHASE_STRIP = YES;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				INSTALL_PATH = "@executable_path/../Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = "@loader_path/../Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 10.7;
+				SDKROOT = macosx;
+			};
+			name = Release;
+		};
+		3514F0F51457A0F50054812F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)/QWeiboSDK/Frameworks\"",
+					"\"$(SRCROOT)/../QWeiboClient/QWeiboClient/Frameworks\"",
+				);
+				FRAMEWORK_VERSION = A;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "QWeiboSDK/QWeiboSDK-Prefix.pch";
+				INFOPLIST_FILE = "QWeiboSDK/QWeiboSDK-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = framework;
+			};
+			name = Debug;
+		};
+		3514F0F61457A0F50054812F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)/QWeiboSDK/Frameworks\"",
+					"\"$(SRCROOT)/../QWeiboClient/QWeiboClient/Frameworks\"",
+				);
+				FRAMEWORK_VERSION = A;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "QWeiboSDK/QWeiboSDK-Prefix.pch";
+				INFOPLIST_FILE = "QWeiboSDK/QWeiboSDK-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = framework;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		3514F0D81457A0F50054812F /* Build configuration list for PBXProject "QWeiboSDK" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3514F0F21457A0F50054812F /* Debug */,
+				3514F0F31457A0F50054812F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		3514F0F41457A0F50054812F /* Build configuration list for PBXNativeTarget "QWeiboSDK" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3514F0F51457A0F50054812F /* Debug */,
+				3514F0F61457A0F50054812F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 3514F0D51457A0F50054812F /* Project object */;
+}

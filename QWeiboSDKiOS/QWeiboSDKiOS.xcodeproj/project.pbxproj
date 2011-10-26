@@ -1,0 +1,465 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		354A2B691457BDE20002151C /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 354A2B681457BDE20002151C /* Foundation.framework */; };
+		354A2B6F1457BDE20002151C /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 354A2B6D1457BDE20002151C /* InfoPlist.strings */; };
+		354A2B911457C1A70002151C /* NSData+QBase64.h in Headers */ = {isa = PBXBuildFile; fileRef = 354A2B7B1457C1A70002151C /* NSData+QBase64.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		354A2B921457C1A70002151C /* NSData+QBase64.m in Sources */ = {isa = PBXBuildFile; fileRef = 354A2B7C1457C1A70002151C /* NSData+QBase64.m */; };
+		354A2B931457C1A70002151C /* NSString+QEncoding.h in Headers */ = {isa = PBXBuildFile; fileRef = 354A2B7D1457C1A70002151C /* NSString+QEncoding.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		354A2B941457C1A70002151C /* NSString+QEncoding.m in Sources */ = {isa = PBXBuildFile; fileRef = 354A2B7E1457C1A70002151C /* NSString+QEncoding.m */; };
+		354A2B951457C1A70002151C /* NSURL+QAdditions.h in Headers */ = {isa = PBXBuildFile; fileRef = 354A2B7F1457C1A70002151C /* NSURL+QAdditions.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		354A2B961457C1A70002151C /* NSURL+QAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 354A2B801457C1A70002151C /* NSURL+QAdditions.m */; };
+		354A2B971457C1A70002151C /* QAsyncHttp.h in Headers */ = {isa = PBXBuildFile; fileRef = 354A2B811457C1A70002151C /* QAsyncHttp.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		354A2B981457C1A70002151C /* QAsyncHttp.m in Sources */ = {isa = PBXBuildFile; fileRef = 354A2B821457C1A70002151C /* QAsyncHttp.m */; };
+		354A2B991457C1A70002151C /* QMutableURLRequest.h in Headers */ = {isa = PBXBuildFile; fileRef = 354A2B831457C1A70002151C /* QMutableURLRequest.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		354A2B9A1457C1A70002151C /* QMutableURLRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 354A2B841457C1A70002151C /* QMutableURLRequest.m */; };
+		354A2B9B1457C1A70002151C /* QOauth.h in Headers */ = {isa = PBXBuildFile; fileRef = 354A2B851457C1A70002151C /* QOauth.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		354A2B9C1457C1A70002151C /* QOauth.m in Sources */ = {isa = PBXBuildFile; fileRef = 354A2B861457C1A70002151C /* QOauth.m */; };
+		354A2B9D1457C1A70002151C /* QOauthKey.h in Headers */ = {isa = PBXBuildFile; fileRef = 354A2B871457C1A70002151C /* QOauthKey.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		354A2B9E1457C1A70002151C /* QOauthKey.m in Sources */ = {isa = PBXBuildFile; fileRef = 354A2B881457C1A70002151C /* QOauthKey.m */; };
+		354A2B9F1457C1A70002151C /* QSyncHttp.h in Headers */ = {isa = PBXBuildFile; fileRef = 354A2B891457C1A70002151C /* QSyncHttp.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		354A2BA01457C1A70002151C /* QSyncHttp.m in Sources */ = {isa = PBXBuildFile; fileRef = 354A2B8A1457C1A70002151C /* QSyncHttp.m */; };
+		354A2BA11457C1A70002151C /* QWeiboRequest.h in Headers */ = {isa = PBXBuildFile; fileRef = 354A2B8B1457C1A70002151C /* QWeiboRequest.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		354A2BA21457C1A70002151C /* QWeiboRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 354A2B8C1457C1A70002151C /* QWeiboRequest.m */; };
+		354A2BA31457C1A70002151C /* JSONURLConnection.h in Headers */ = {isa = PBXBuildFile; fileRef = 354A2B8D1457C1A70002151C /* JSONURLConnection.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		354A2BA41457C1A70002151C /* JSONURLConnection.m in Sources */ = {isa = PBXBuildFile; fileRef = 354A2B8E1457C1A70002151C /* JSONURLConnection.m */; };
+		354A2BA51457C1A70002151C /* QWeiboAsyncApi.h in Headers */ = {isa = PBXBuildFile; fileRef = 354A2B8F1457C1A70002151C /* QWeiboAsyncApi.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		354A2BA61457C1A70002151C /* QWeiboAsyncApi.m in Sources */ = {isa = PBXBuildFile; fileRef = 354A2B901457C1A70002151C /* QWeiboAsyncApi.m */; };
+		354A2BB11457C1C20002151C /* NSObject+Universal.h in Headers */ = {isa = PBXBuildFile; fileRef = 354A2BA91457C1C20002151C /* NSObject+Universal.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		354A2BB21457C1C20002151C /* NSObject+Universal.m in Sources */ = {isa = PBXBuildFile; fileRef = 354A2BAA1457C1C20002151C /* NSObject+Universal.m */; };
+		354A2BB51457C1C20002151C /* NSDate+Categories.h in Headers */ = {isa = PBXBuildFile; fileRef = 354A2BAD1457C1C20002151C /* NSDate+Categories.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		354A2BB61457C1C20002151C /* NSDate+Categories.m in Sources */ = {isa = PBXBuildFile; fileRef = 354A2BAE1457C1C20002151C /* NSDate+Categories.m */; };
+		354A2BBB1457C1C90002151C /* QWPerson.h in Headers */ = {isa = PBXBuildFile; fileRef = 354A2BB71457C1C90002151C /* QWPerson.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		354A2BBC1457C1C90002151C /* QWPerson.m in Sources */ = {isa = PBXBuildFile; fileRef = 354A2BB81457C1C90002151C /* QWPerson.m */; };
+		354A2BBD1457C1C90002151C /* QWMessage.h in Headers */ = {isa = PBXBuildFile; fileRef = 354A2BB91457C1C90002151C /* QWMessage.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		354A2BBE1457C1C90002151C /* QWMessage.m in Sources */ = {isa = PBXBuildFile; fileRef = 354A2BBA1457C1C90002151C /* QWMessage.m */; };
+		354A2BC41457D39D0002151C /* QWConstants.h in Headers */ = {isa = PBXBuildFile; fileRef = 354A2BC31457D39D0002151C /* QWConstants.h */; };
+		354A2BE21457E6E90002151C /* YAJLiOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 354A2BE11457E6E90002151C /* YAJLiOS.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		354A2BC11457D3660002151C /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		354A2B651457BDE20002151C /* QWeiboSDKiOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework.static; includeInIndex = 0; path = QWeiboSDKiOS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		354A2B681457BDE20002151C /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		354A2B6C1457BDE20002151C /* QWeiboSDKiOS-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "QWeiboSDKiOS-Info.plist"; sourceTree = "<group>"; };
+		354A2B6E1457BDE20002151C /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		354A2B701457BDE20002151C /* QWeiboSDKiOS-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "QWeiboSDKiOS-Prefix.pch"; sourceTree = "<group>"; };
+		354A2B7B1457C1A70002151C /* NSData+QBase64.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSData+QBase64.h"; sourceTree = "<group>"; };
+		354A2B7C1457C1A70002151C /* NSData+QBase64.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSData+QBase64.m"; sourceTree = "<group>"; };
+		354A2B7D1457C1A70002151C /* NSString+QEncoding.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+QEncoding.h"; sourceTree = "<group>"; };
+		354A2B7E1457C1A70002151C /* NSString+QEncoding.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+QEncoding.m"; sourceTree = "<group>"; };
+		354A2B7F1457C1A70002151C /* NSURL+QAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSURL+QAdditions.h"; sourceTree = "<group>"; };
+		354A2B801457C1A70002151C /* NSURL+QAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSURL+QAdditions.m"; sourceTree = "<group>"; };
+		354A2B811457C1A70002151C /* QAsyncHttp.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QAsyncHttp.h; sourceTree = "<group>"; };
+		354A2B821457C1A70002151C /* QAsyncHttp.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QAsyncHttp.m; sourceTree = "<group>"; };
+		354A2B831457C1A70002151C /* QMutableURLRequest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QMutableURLRequest.h; sourceTree = "<group>"; };
+		354A2B841457C1A70002151C /* QMutableURLRequest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QMutableURLRequest.m; sourceTree = "<group>"; };
+		354A2B851457C1A70002151C /* QOauth.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QOauth.h; sourceTree = "<group>"; };
+		354A2B861457C1A70002151C /* QOauth.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QOauth.m; sourceTree = "<group>"; };
+		354A2B871457C1A70002151C /* QOauthKey.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QOauthKey.h; sourceTree = "<group>"; };
+		354A2B881457C1A70002151C /* QOauthKey.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QOauthKey.m; sourceTree = "<group>"; };
+		354A2B891457C1A70002151C /* QSyncHttp.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QSyncHttp.h; sourceTree = "<group>"; };
+		354A2B8A1457C1A70002151C /* QSyncHttp.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QSyncHttp.m; sourceTree = "<group>"; };
+		354A2B8B1457C1A70002151C /* QWeiboRequest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QWeiboRequest.h; sourceTree = "<group>"; };
+		354A2B8C1457C1A70002151C /* QWeiboRequest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QWeiboRequest.m; sourceTree = "<group>"; };
+		354A2B8D1457C1A70002151C /* JSONURLConnection.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSONURLConnection.h; sourceTree = "<group>"; };
+		354A2B8E1457C1A70002151C /* JSONURLConnection.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JSONURLConnection.m; sourceTree = "<group>"; };
+		354A2B8F1457C1A70002151C /* QWeiboAsyncApi.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QWeiboAsyncApi.h; sourceTree = "<group>"; };
+		354A2B901457C1A70002151C /* QWeiboAsyncApi.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QWeiboAsyncApi.m; sourceTree = "<group>"; };
+		354A2BA91457C1C20002151C /* NSObject+Universal.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+Universal.h"; sourceTree = "<group>"; };
+		354A2BAA1457C1C20002151C /* NSObject+Universal.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+Universal.m"; sourceTree = "<group>"; };
+		354A2BAD1457C1C20002151C /* NSDate+Categories.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDate+Categories.h"; sourceTree = "<group>"; };
+		354A2BAE1457C1C20002151C /* NSDate+Categories.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDate+Categories.m"; sourceTree = "<group>"; };
+		354A2BB71457C1C90002151C /* QWPerson.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QWPerson.h; sourceTree = "<group>"; };
+		354A2BB81457C1C90002151C /* QWPerson.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QWPerson.m; sourceTree = "<group>"; };
+		354A2BB91457C1C90002151C /* QWMessage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QWMessage.h; sourceTree = "<group>"; };
+		354A2BBA1457C1C90002151C /* QWMessage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QWMessage.m; sourceTree = "<group>"; };
+		354A2BC31457D39D0002151C /* QWConstants.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QWConstants.h; sourceTree = "<group>"; };
+		354A2BE11457E6E90002151C /* YAJLiOS.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = YAJLiOS.framework; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		354A2B601457BDE20002151C /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				354A2B691457BDE20002151C /* Foundation.framework in Frameworks */,
+				354A2BE21457E6E90002151C /* YAJLiOS.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		354A2B571457BDE10002151C = {
+			isa = PBXGroup;
+			children = (
+				354A2B6A1457BDE20002151C /* QWeiboSDKiOS */,
+				354A2B671457BDE20002151C /* Frameworks */,
+				354A2B661457BDE20002151C /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		354A2B661457BDE20002151C /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				354A2B651457BDE20002151C /* QWeiboSDKiOS.framework */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		354A2B671457BDE20002151C /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				354A2BE11457E6E90002151C /* YAJLiOS.framework */,
+				354A2B681457BDE20002151C /* Foundation.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		354A2B6A1457BDE20002151C /* QWeiboSDKiOS */ = {
+			isa = PBXGroup;
+			children = (
+				354A2B7A1457C18E0002151C /* Categories */,
+				354A2B791457C18C0002151C /* Model */,
+				354A2B7B1457C1A70002151C /* NSData+QBase64.h */,
+				354A2B7C1457C1A70002151C /* NSData+QBase64.m */,
+				354A2B7D1457C1A70002151C /* NSString+QEncoding.h */,
+				354A2B7E1457C1A70002151C /* NSString+QEncoding.m */,
+				354A2B7F1457C1A70002151C /* NSURL+QAdditions.h */,
+				354A2B801457C1A70002151C /* NSURL+QAdditions.m */,
+				354A2B811457C1A70002151C /* QAsyncHttp.h */,
+				354A2B821457C1A70002151C /* QAsyncHttp.m */,
+				354A2B831457C1A70002151C /* QMutableURLRequest.h */,
+				354A2B841457C1A70002151C /* QMutableURLRequest.m */,
+				354A2B851457C1A70002151C /* QOauth.h */,
+				354A2B861457C1A70002151C /* QOauth.m */,
+				354A2B871457C1A70002151C /* QOauthKey.h */,
+				354A2B881457C1A70002151C /* QOauthKey.m */,
+				354A2B891457C1A70002151C /* QSyncHttp.h */,
+				354A2B8A1457C1A70002151C /* QSyncHttp.m */,
+				354A2B8B1457C1A70002151C /* QWeiboRequest.h */,
+				354A2B8C1457C1A70002151C /* QWeiboRequest.m */,
+				354A2B8D1457C1A70002151C /* JSONURLConnection.h */,
+				354A2B8E1457C1A70002151C /* JSONURLConnection.m */,
+				354A2B8F1457C1A70002151C /* QWeiboAsyncApi.h */,
+				354A2B901457C1A70002151C /* QWeiboAsyncApi.m */,
+				354A2B6B1457BDE20002151C /* Supporting Files */,
+			);
+			path = QWeiboSDKiOS;
+			sourceTree = "<group>";
+		};
+		354A2B6B1457BDE20002151C /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				354A2BC31457D39D0002151C /* QWConstants.h */,
+				354A2B6C1457BDE20002151C /* QWeiboSDKiOS-Info.plist */,
+				354A2B6D1457BDE20002151C /* InfoPlist.strings */,
+				354A2B701457BDE20002151C /* QWeiboSDKiOS-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		354A2B791457C18C0002151C /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				354A2BB71457C1C90002151C /* QWPerson.h */,
+				354A2BB81457C1C90002151C /* QWPerson.m */,
+				354A2BB91457C1C90002151C /* QWMessage.h */,
+				354A2BBA1457C1C90002151C /* QWMessage.m */,
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
+		354A2B7A1457C18E0002151C /* Categories */ = {
+			isa = PBXGroup;
+			children = (
+				354A2BA91457C1C20002151C /* NSObject+Universal.h */,
+				354A2BAA1457C1C20002151C /* NSObject+Universal.m */,
+				354A2BAD1457C1C20002151C /* NSDate+Categories.h */,
+				354A2BAE1457C1C20002151C /* NSDate+Categories.m */,
+			);
+			name = Categories;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		354A2B611457BDE20002151C /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				354A2B911457C1A70002151C /* NSData+QBase64.h in Headers */,
+				354A2B931457C1A70002151C /* NSString+QEncoding.h in Headers */,
+				354A2B951457C1A70002151C /* NSURL+QAdditions.h in Headers */,
+				354A2B971457C1A70002151C /* QAsyncHttp.h in Headers */,
+				354A2B991457C1A70002151C /* QMutableURLRequest.h in Headers */,
+				354A2B9B1457C1A70002151C /* QOauth.h in Headers */,
+				354A2B9D1457C1A70002151C /* QOauthKey.h in Headers */,
+				354A2B9F1457C1A70002151C /* QSyncHttp.h in Headers */,
+				354A2BA11457C1A70002151C /* QWeiboRequest.h in Headers */,
+				354A2BA31457C1A70002151C /* JSONURLConnection.h in Headers */,
+				354A2BA51457C1A70002151C /* QWeiboAsyncApi.h in Headers */,
+				354A2BB11457C1C20002151C /* NSObject+Universal.h in Headers */,
+				354A2BB51457C1C20002151C /* NSDate+Categories.h in Headers */,
+				354A2BBB1457C1C90002151C /* QWPerson.h in Headers */,
+				354A2BBD1457C1C90002151C /* QWMessage.h in Headers */,
+				354A2BC41457D39D0002151C /* QWConstants.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		354A2B641457BDE20002151C /* QWeiboSDKiOS */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 354A2B731457BDE20002151C /* Build configuration list for PBXNativeTarget "QWeiboSDKiOS" */;
+			buildPhases = (
+				354A2B5E1457BDE20002151C /* ShellScript */,
+				354A2B5F1457BDE20002151C /* Sources */,
+				354A2B601457BDE20002151C /* Frameworks */,
+				354A2B611457BDE20002151C /* Headers */,
+				354A2B621457BDE20002151C /* Resources */,
+				354A2B631457BDE20002151C /* ShellScript */,
+				354A2BC11457D3660002151C /* CopyFiles */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = QWeiboSDKiOS;
+			productName = QWeiboSDKiOS;
+			productReference = 354A2B651457BDE20002151C /* QWeiboSDKiOS.framework */;
+			productType = "com.apple.product-type.framework.static";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		354A2B591457BDE10002151C /* Project object */ = {
+			isa = PBXProject;
+			buildConfigurationList = 354A2B5C1457BDE10002151C /* Build configuration list for PBXProject "QWeiboSDKiOS" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 354A2B571457BDE10002151C;
+			productRefGroup = 354A2B661457BDE20002151C /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				354A2B641457BDE20002151C /* QWeiboSDKiOS */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		354A2B621457BDE20002151C /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				354A2B6F1457BDE20002151C /* InfoPlist.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		354A2B5E1457BDE20002151C /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "set -e\n\nset +u\nif [[ $UFW_MASTER_SCRIPT_RUNNING ]]\nthen\n    # Nothing for the slave script to do\n    exit 0\nfi\nset -u\n\nif [[ \"$SDK_NAME\" =~ ([A-Za-z]+) ]]\nthen\n    UFW_SDK_PLATFORM=${BASH_REMATCH[1]}\nelse\n    echo \"Could not find platform name from SDK_NAME: $SDK_NAME\"\n    exit 1\nfi\n\nif [[ \"$SDK_NAME\" =~ ([0-9]+.*$) ]]\nthen\n\tUFW_SDK_VERSION=${BASH_REMATCH[1]}\nelse\n    echo \"Could not find sdk version  from SDK_NAME: $SDK_NAME\"\n    exit 1\nfi\n\nif [[ \"$UFW_SDK_PLATFORM\" = \"iphoneos\" ]]\nthen\n    UFW_OTHER_PLATFORM=iphonesimulator\nelse\n    UFW_OTHER_PLATFORM=iphoneos\nfi\n\nif [[ \"$BUILT_PRODUCTS_DIR\" =~ (.*)$UFW_SDK_PLATFORM$ ]]\nthen\n    UFW_OTHER_BUILT_PRODUCTS_DIR=\"${BASH_REMATCH[1]}${UFW_OTHER_PLATFORM}\"\nelse\n    echo \"Could not find $UFW_SDK_PLATFORM in $BUILT_PRODUCTS_DIR\"\n    exit 1\nfi\n\nONLY_ACTIVE_PLATFORM=${ONLY_ACTIVE_PLATFORM:-$ONLY_ACTIVE_ARCH}\n\n# Short-circuit if all binaries are up to date\n\nif [[ -f \"${BUILT_PRODUCTS_DIR}/${EXECUTABLE_PATH}\" ]] && \\\n   [[ -f \"${BUILT_PRODUCTS_DIR}/${PRODUCT_NAME}.embeddedframework/${EXECUTABLE_PATH}\" ]] && \\\n   [[ ! \"${BUILT_PRODUCTS_DIR}/${EXECUTABLE_PATH}\" -nt \"${BUILT_PRODUCTS_DIR}/${PRODUCT_NAME}.embeddedframework/${EXECUTABLE_PATH}\" ]] && \\\n  ([[ \"${ONLY_ACTIVE_PLATFORM}\" == \"YES\" ]] || \\\n    ([[ -f \"${UFW_OTHER_BUILT_PRODUCTS_DIR}/${EXECUTABLE_PATH}\" ]] && \\\n     [[ -f \"${UFW_OTHER_BUILT_PRODUCTS_DIR}/${PRODUCT_NAME}.embeddedframework/${EXECUTABLE_PATH}\" ]] && \\\n     [[ ! \"${UFW_OTHER_BUILT_PRODUCTS_DIR}/${EXECUTABLE_PATH}\" -nt \"${UFW_OTHER_BUILT_PRODUCTS_DIR}/${PRODUCT_NAME}.embeddedframework/${EXECUTABLE_PATH}\" ]]\n    )\n  )\nthen\n    exit 0\nfi\n\n\n# Clean other platform if needed\n\nif [[ ! -f \"${BUILT_PRODUCTS_DIR}/${EXECUTABLE_PATH}\" ]] && [[ \"${ONLY_ACTIVE_PLATFORM}\" != \"YES\" ]]\nthen\n\techo \"Platform \\\"$UFW_SDK_PLATFORM\\\" was cleaned recently. Cleaning \\\"$UFW_OTHER_PLATFORM\\\" as well\"\n\techo xcodebuild -project \"${PROJECT_FILE_PATH}\" -target \"${TARGET_NAME}\" -configuration \"${CONFIGURATION}\" -sdk ${UFW_OTHER_PLATFORM}${UFW_SDK_VERSION} BUILD_DIR=\"${BUILD_DIR}\" CONFIGURATION_TEMP_DIR=\"${PROJECT_TEMP_DIR}/${CONFIGURATION}-${UFW_OTHER_PLATFORM}\" clean\n\txcodebuild -project \"${PROJECT_FILE_PATH}\" -target \"${TARGET_NAME}\" -configuration \"${CONFIGURATION}\" -sdk ${UFW_OTHER_PLATFORM}${UFW_SDK_VERSION} BUILD_DIR=\"${BUILD_DIR}\" CONFIGURATION_TEMP_DIR=\"${PROJECT_TEMP_DIR}/${CONFIGURATION}-${UFW_OTHER_PLATFORM}\" clean\nfi\n\n\n# Make sure we are building from fresh binaries\n\nrm -rf \"${BUILT_PRODUCTS_DIR}/${EXECUTABLE_PATH}\"\nrm -rf \"${BUILT_PRODUCTS_DIR}/${PRODUCT_NAME}.embeddedframework\"\n\nif [[ \"${ONLY_ACTIVE_PLATFORM}\" != \"YES\" ]]\nthen\n    rm -rf \"${UFW_OTHER_BUILT_PRODUCTS_DIR}/${EXECUTABLE_PATH}\"\n    rm -rf \"${UFW_OTHER_BUILT_PRODUCTS_DIR}/${PRODUCT_NAME}.embeddedframework\"\nfi\n";
+		};
+		354A2B631457BDE20002151C /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "set -e\n\nset +u\nif [[ $UFW_MASTER_SCRIPT_RUNNING ]]\nthen\n    # Nothing for the slave script to do\n    exit 0\nfi\nset -u\nexport UFW_MASTER_SCRIPT_RUNNING=1\n\n\n# Functions\n\n## List files in the specified directory, storing to the specified array.\n#\n# @param $1 The path to list\n# @param $2 The name of the array to fill\n#\n##\nlist_files ()\n{\n    filelist=$(ls \"$1\")\n    while read line\n    do\n        eval \"$2[\\${#$2[*]}]=\\\"\\$line\\\"\"\n    done <<< \"$filelist\"\n}\n\n\n# Sanity check\n\nif [[ ! -f \"${BUILT_PRODUCTS_DIR}/${EXECUTABLE_PATH}\" ]]\nthen\n    echo \"Framework target \\\"${TARGET_NAME}\\\" had no source files to build from. Make sure your source files have the correct target membership\"\n    exit 1\nfi\n\n\n# Gather information\n\nif [[ \"$SDK_NAME\" =~ ([A-Za-z]+) ]]\nthen\n    UFW_SDK_PLATFORM=${BASH_REMATCH[1]}\nelse\n    echo \"Could not find platform name from SDK_NAME: $SDK_NAME\"\n    exit 1\nfi\n\nif [[ \"$SDK_NAME\" =~ ([0-9]+.*$) ]]\nthen\n    UFW_SDK_VERSION=${BASH_REMATCH[1]}\nelse\n    echo \"Could not find sdk version from SDK_NAME: $SDK_NAME\"\n    exit 1\nfi\n\nif [[ \"$UFW_SDK_PLATFORM\" = \"iphoneos\" ]]\nthen\n    UFW_OTHER_PLATFORM=iphonesimulator\nelse\n    UFW_OTHER_PLATFORM=iphoneos\nfi\n\nif [[ \"$BUILT_PRODUCTS_DIR\" =~ (.*)$UFW_SDK_PLATFORM$ ]]\nthen\n    UFW_OTHER_BUILT_PRODUCTS_DIR=\"${BASH_REMATCH[1]}${UFW_OTHER_PLATFORM}\"\nelse\n    echo \"Could not find $UFW_SDK_PLATFORM in $BUILT_PRODUCTS_DIR\"\n    exit 1\nfi\n\nONLY_ACTIVE_PLATFORM=${ONLY_ACTIVE_PLATFORM:-$ONLY_ACTIVE_ARCH}\n\n# Short-circuit if all binaries are up to date.\n# We already checked the other platform in the prerun script.\n\nif [[ -f \"${BUILT_PRODUCTS_DIR}/${EXECUTABLE_PATH}\" ]] && [[ -f \"${BUILT_PRODUCTS_DIR}/${PRODUCT_NAME}.embeddedframework/${EXECUTABLE_PATH}\" ]] && [[ ! \"${BUILT_PRODUCTS_DIR}/${EXECUTABLE_PATH}\" -nt \"${BUILT_PRODUCTS_DIR}/${PRODUCT_NAME}.embeddedframework/${EXECUTABLE_PATH}\" ]]\nthen\n    exit 0\nfi\n\nif [ \"${ONLY_ACTIVE_PLATFORM}\" == \"YES\" ]\nthen\n    echo \"ONLY_ACTIVE_PLATFORM=${ONLY_ACTIVE_PLATFORM}: Skipping other platform build\"\nelse\n    # Make sure the other platform gets built\n    \n    echo \"Build other platform\"\n    \n    echo xcodebuild -project \"${PROJECT_FILE_PATH}\" -target \"${TARGET_NAME}\" -configuration \"${CONFIGURATION}\" -sdk ${UFW_OTHER_PLATFORM}${UFW_SDK_VERSION} BUILD_DIR=\"${BUILD_DIR}\" CONFIGURATION_TEMP_DIR=\"${PROJECT_TEMP_DIR}/${CONFIGURATION}-${UFW_OTHER_PLATFORM}\" $ACTION\n    xcodebuild -project \"${PROJECT_FILE_PATH}\" -target \"${TARGET_NAME}\" -configuration \"${CONFIGURATION}\" -sdk ${UFW_OTHER_PLATFORM}${UFW_SDK_VERSION} BUILD_DIR=\"${BUILD_DIR}\" CONFIGURATION_TEMP_DIR=\"${PROJECT_TEMP_DIR}/${CONFIGURATION}-${UFW_OTHER_PLATFORM}\" $ACTION\n    \n    \n    # Build the fat static library binary\n    \n    echo \"Create universal static library\"\n    \n    echo \"$PLATFORM_DEVELOPER_BIN_DIR/libtool\" -static \"${BUILT_PRODUCTS_DIR}/${EXECUTABLE_PATH}\" \"${UFW_OTHER_BUILT_PRODUCTS_DIR}/${EXECUTABLE_PATH}\" -o \"${BUILT_PRODUCTS_DIR}/${EXECUTABLE_PATH}.temp\"\n    \"$PLATFORM_DEVELOPER_BIN_DIR/libtool\" -static \"${BUILT_PRODUCTS_DIR}/${EXECUTABLE_PATH}\" \"${UFW_OTHER_BUILT_PRODUCTS_DIR}/${EXECUTABLE_PATH}\" -o \"${BUILT_PRODUCTS_DIR}/${EXECUTABLE_PATH}.temp\"\n    \n    echo mv \"${BUILT_PRODUCTS_DIR}/${EXECUTABLE_PATH}.temp\" \"${BUILT_PRODUCTS_DIR}/${EXECUTABLE_PATH}\"\n    mv \"${BUILT_PRODUCTS_DIR}/${EXECUTABLE_PATH}.temp\" \"${BUILT_PRODUCTS_DIR}/${EXECUTABLE_PATH}\"\nfi\n\n# Build embedded framework structure\n\necho \"Build Embedded Framework\"\n\necho rm -rf \"${BUILT_PRODUCTS_DIR}/${PRODUCT_NAME}.embeddedframework\"\nrm -rf \"${BUILT_PRODUCTS_DIR}/${PRODUCT_NAME}.embeddedframework\"\necho mkdir -p \"${BUILT_PRODUCTS_DIR}/${PRODUCT_NAME}.embeddedframework/Resources\"\nmkdir -p \"${BUILT_PRODUCTS_DIR}/${PRODUCT_NAME}.embeddedframework/Resources\"\necho cp -a \"${BUILT_PRODUCTS_DIR}/${WRAPPER_NAME}\" \"${BUILT_PRODUCTS_DIR}/${PRODUCT_NAME}.embeddedframework/\"\ncp -a \"${BUILT_PRODUCTS_DIR}/${WRAPPER_NAME}\" \"${BUILT_PRODUCTS_DIR}/${PRODUCT_NAME}.embeddedframework/\"\n\ndeclare -a UFW_FILE_LIST\nlist_files \"${BUILT_PRODUCTS_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}\" UFW_FILE_LIST\nfor filename in \"${UFW_FILE_LIST[@]}\"\ndo\n    if [[ \"${filename}\" != \"Info.plist\" ]] && [[ ! \"${filename}\" =~ .*\\.lproj$ ]]\n    then\n        echo ln -sf \"../${WRAPPER_NAME}/Resources/${filename}\" \"${BUILT_PRODUCTS_DIR}/${PRODUCT_NAME}.embeddedframework/Resources/${filename}\"\n        ln -sf \"../${WRAPPER_NAME}/Resources/${filename}\" \"${BUILT_PRODUCTS_DIR}/${PRODUCT_NAME}.embeddedframework/Resources/${filename}\"\n    fi\ndone\n\n\nif [ \"${ONLY_ACTIVE_PLATFORM}\" != \"YES\" ]\nthen\n    # Replace other platform's framework with a copy of this one (so that both have the same universal binary)\n    \n    echo \"Copy from $UFW_SDK_PLATFORM to $UFW_OTHER_PLATFORM\"\n    \n    echo rm -rf \"${BUILD_DIR}/${CONFIGURATION}-${UFW_OTHER_PLATFORM}\"\n    rm -rf \"${BUILD_DIR}/${CONFIGURATION}-${UFW_OTHER_PLATFORM}\"\n    echo cp -a \"${BUILD_DIR}/${CONFIGURATION}-${UFW_SDK_PLATFORM}\" \"${BUILD_DIR}/${CONFIGURATION}-${UFW_OTHER_PLATFORM}\"\n    cp -a \"${BUILD_DIR}/${CONFIGURATION}-${UFW_SDK_PLATFORM}\" \"${BUILD_DIR}/${CONFIGURATION}-${UFW_OTHER_PLATFORM}\"\nfi\n";
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		354A2B5F1457BDE20002151C /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				354A2B921457C1A70002151C /* NSData+QBase64.m in Sources */,
+				354A2B941457C1A70002151C /* NSString+QEncoding.m in Sources */,
+				354A2B961457C1A70002151C /* NSURL+QAdditions.m in Sources */,
+				354A2B981457C1A70002151C /* QAsyncHttp.m in Sources */,
+				354A2B9A1457C1A70002151C /* QMutableURLRequest.m in Sources */,
+				354A2B9C1457C1A70002151C /* QOauth.m in Sources */,
+				354A2B9E1457C1A70002151C /* QOauthKey.m in Sources */,
+				354A2BA01457C1A70002151C /* QSyncHttp.m in Sources */,
+				354A2BA21457C1A70002151C /* QWeiboRequest.m in Sources */,
+				354A2BA41457C1A70002151C /* JSONURLConnection.m in Sources */,
+				354A2BA61457C1A70002151C /* QWeiboAsyncApi.m in Sources */,
+				354A2BB21457C1C20002151C /* NSObject+Universal.m in Sources */,
+				354A2BB61457C1C20002151C /* NSDate+Categories.m in Sources */,
+				354A2BBC1457C1C90002151C /* QWPerson.m in Sources */,
+				354A2BBE1457C1C90002151C /* QWMessage.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		354A2B6D1457BDE20002151C /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				354A2B6E1457BDE20002151C /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		354A2B711457BDE20002151C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				COPY_PHASE_STRIP = NO;
+				FRAMEWORK_SEARCH_PATHS = "/Users/leon/Desktop/Workspace/QWeiboSDK/QWeiboSDKiOS/**";
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_VERSION = com.apple.compilers.llvmgcc42;
+				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 4.3;
+				OTHER_LDFLAGS = (
+					"-all_load",
+					"-ObjC",
+				);
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		354A2B721457BDE20002151C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				COPY_PHASE_STRIP = YES;
+				FRAMEWORK_SEARCH_PATHS = "/Users/leon/Desktop/Workspace/QWeiboSDK/QWeiboSDKiOS/**";
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_VERSION = com.apple.compilers.llvmgcc42;
+				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 4.3;
+				OTHER_LDFLAGS = (
+					"-all_load",
+					"-ObjC",
+				);
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		354A2B741457BDE20002151C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)/QWeiboSDKiOS/Frameworks\"",
+					"\"$(SRCROOT)\"",
+				);
+				FRAMEWORK_VERSION = A;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "QWeiboSDKiOS/QWeiboSDKiOS-Prefix.pch";
+				INFOPLIST_FILE = "QWeiboSDKiOS/QWeiboSDKiOS-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				WRAPPER_EXTENSION = framework;
+			};
+			name = Debug;
+		};
+		354A2B751457BDE20002151C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)/QWeiboSDKiOS/Frameworks\"",
+					"\"$(SRCROOT)\"",
+				);
+				FRAMEWORK_VERSION = A;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "QWeiboSDKiOS/QWeiboSDKiOS-Prefix.pch";
+				INFOPLIST_FILE = "QWeiboSDKiOS/QWeiboSDKiOS-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				WRAPPER_EXTENSION = framework;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		354A2B5C1457BDE10002151C /* Build configuration list for PBXProject "QWeiboSDKiOS" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				354A2B711457BDE20002151C /* Debug */,
+				354A2B721457BDE20002151C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		354A2B731457BDE20002151C /* Build configuration list for PBXNativeTarget "QWeiboSDKiOS" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				354A2B741457BDE20002151C /* Debug */,
+				354A2B751457BDE20002151C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 354A2B591457BDE10002151C /* Project object */;
+}
