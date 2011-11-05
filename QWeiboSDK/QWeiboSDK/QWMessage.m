@@ -61,7 +61,7 @@ static NSOperationQueue *ATSharedOperationQueue() {
     [_text autorelease];
     _text = [text copy];
     
-    NSString *regexString = @"<a href=\"(.*)\" target=\"_blank\">(.*)</a>";   
+    NSString *regexString = @"<a href=\"(.*?)\" target=\"_blank\">(.*?)</a>";   
     NSRegularExpression *regex = [NSRegularExpression regularExpressionWithPattern:regexString
                                                                            options:NSRegularExpressionCaseInsensitive
                                                                              error:NULL];
@@ -173,9 +173,9 @@ static NSOperationQueue *ATSharedOperationQueue() {
     if ([dict objectForKey:@"source"] && [dict objectForKey:@"source"] != [NSNull null]) {
         source = [[[QWMessage alloc] initWithJSON:[dict objectForKey:@"source"]] autorelease];
         if ([text isEqualToString:@""])
-            text = [NSString stringWithFormat:@"-------------------\n@%@:%@", source.nick, source.text];
+            text = [NSString stringWithFormat:@"-------------------\n<a href=\"Dandelion://%@\" target=\"_blank\">@%@</a>:%@", source.name, source.nick, source.text];
         else 
-            text = [NSString stringWithFormat:@"%@\n-------------------\n@%@:%@", text, source.nick, source.text];
+            text = [NSString stringWithFormat:@"%@\n-------------------\n<a href=\"Dandelion://%@\" target=\"_blank\">@%@</a>:%@", text, source.name, source.nick, source.text];
         if (![source.imageURL isEqualToString:@""])
             image = source.imageURL;
     }
