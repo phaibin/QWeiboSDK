@@ -19,12 +19,18 @@
     // cursor
     [attrString addAttribute:NSCursorAttributeName value:[NSCursor arrowCursor] range:range];
     
+    // shadow
+    NSShadow *shadow = [[NSShadow alloc] init];
+    shadow.shadowColor = RGBCOLOR(88, 88, 88);
+    shadow.shadowBlurRadius = 3;
+    [attrString addAttribute:NSShadowAttributeName value:shadow range:range];
+    
     // next make the text appear with an underline
 //    [attrString addAttribute:NSUnderlineStyleAttributeName value:[NSNumber numberWithInt:NSSingleUnderlineStyle] range:range];
     
-    NSMutableParagraphStyle *truncateStyle = [[[NSMutableParagraphStyle alloc] init] autorelease];
-	[truncateStyle setLineBreakMode:NSLineBreakByTruncatingTail];
-	[attrString addAttribute:NSParagraphStyleAttributeName value:truncateStyle range:range];
+//    NSMutableParagraphStyle *truncateStyle = [[[NSMutableParagraphStyle alloc] init] autorelease];
+//	[truncateStyle setLineBreakMode:NSLineBreakByTruncatingTail];
+//	[attrString addAttribute:NSParagraphStyleAttributeName value:truncateStyle range:range];
 
     [attrString endEditing];
     
