@@ -265,6 +265,9 @@
 /* Begin PBXProject section */
 		3514F0D51457A0F50054812F /* Project object */ = {
 			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0420;
+			};
 			buildConfigurationList = 3514F0D81457A0F50054812F /* Build configuration list for PBXProject "QWeiboSDK" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
