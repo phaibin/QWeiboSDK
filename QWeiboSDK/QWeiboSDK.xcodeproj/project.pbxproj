@@ -44,6 +44,7 @@
 		3514F1481457A5580054812F /* NSImage+Categories.m in Sources */ = {isa = PBXBuildFile; fileRef = 3514F1461457A5580054812F /* NSImage+Categories.m */; };
 		3514F14B1457A58F0054812F /* NSDate+Categories.h in Headers */ = {isa = PBXBuildFile; fileRef = 3514F1491457A58F0054812F /* NSDate+Categories.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		3514F14C1457A58F0054812F /* NSDate+Categories.m in Sources */ = {isa = PBXBuildFile; fileRef = 3514F14A1457A58F0054812F /* NSDate+Categories.m */; };
+		35C6DFB11467B21100EF052F /* face.plist in Resources */ = {isa = PBXBuildFile; fileRef = 35C6DFB01467B21100EF052F /* face.plist */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -91,6 +92,7 @@
 		3514F1491457A58F0054812F /* NSDate+Categories.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDate+Categories.h"; sourceTree = "<group>"; };
 		3514F14A1457A58F0054812F /* NSDate+Categories.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDate+Categories.m"; sourceTree = "<group>"; };
 		3514F14D1457A5FA0054812F /* QWConstants.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QWConstants.h; sourceTree = "<group>"; };
+		35C6DFB01467B21100EF052F /* face.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = face.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -178,6 +180,7 @@
 		3514F0E91457A0F50054812F /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				35C6DFB01467B21100EF052F /* face.plist */,
 				3514F14D1457A5FA0054812F /* QWConstants.h */,
 				3514F0EA1457A0F50054812F /* QWeiboSDK-Info.plist */,
 				3514F0EB1457A0F50054812F /* InfoPlist.strings */,
@@ -291,6 +294,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				3514F0ED1457A0F50054812F /* InfoPlist.strings in Resources */,
+				35C6DFB11467B21100EF052F /* face.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -46,6 +46,17 @@ static NSOperationQueue *ATSharedOperationQueue() {
 @synthesize thumbnailImage = _thumbnailImage;
 @synthesize imageLoading;
 
+static NSDictionary *faceDictionary;
+
++ (NSDictionary *)sharedFaceDictionary
+{
+    if (!faceDictionary) {
+        NSString *path = [[NSBundle mainBundle] pathForResource:@"face" ofType:@"plist"];
+        faceDictionary = [[NSDictionary dictionaryWithContentsOfFile:path] retain];
+    }
+    return faceDictionary;
+}
+
 - (NSString *)time
 {
     return [[NSDate dateWithTimeIntervalSince1970:self.timestamp] normalizeDateString];
@@ -79,10 +90,30 @@ static NSOperationQueue *ATSharedOperationQueue() {
     [attrString addAttribute:NSCursorAttributeName value:[NSCursor arrowCursor] range:range];
     [attrString addAttribute:NSFontAttributeName value:[NSFont systemFontOfSize:12.0] range:range];
     
+    //replace hyper link
     for (NSInteger i=(links.count-1); i>-1; i--) {
         NSDictionary *dict = [links objectAtIndex:i];
         [attrString replaceCharactersInRange:[[dict objectForKey:@"range"] rangeValue] withAttributedString:[NSAttributedString hyperlinkFromString:[dict objectForKey:@"linkString"] withURL:[dict objectForKey:@"url"]]];
     }
+    
+    //replace face image
+    [attrString beginEditing];
+    NSDictionary *faceDic = [QWMessage sharedFaceDictionary];
+    for (NSString *key in faceDic) {
+        NSMutableString *innerString = [attrString mutableString];
+        NSRegularExpression *regexForFace = [NSRegularExpression regularExpressionWithPattern:key options:(NSRegularExpressionCaseInsensitive | NSRegularExpressionIgnoreMetacharacters) error:NULL];
+        NSArray *resultsFace = [regexForFace matchesInString:innerString options:0 range:NSMakeRange(0, [innerString length])];
+        for (id result in [resultsFace reverseObjectEnumerator]) {
+            NSImage * pic = [NSImage imageNamed:[faceDic objectForKey:key]];
+            NSTextAttachmentCell *attachmentCell = [[NSTextAttachmentCell alloc] initImageCell:pic];
+            NSTextAttachment *attachment = [[NSTextAttachment alloc] init];
+            [attachment setAttachmentCell: attachmentCell ];
+            NSAttributedString *imageString = [NSAttributedString  attributedStringWithAttachment: attachment];
+            [attrString replaceCharactersInRange:[result range] withAttributedString:imageString];
+        }
+    }
+    [attrString endEditing];
+    
     self.richText = attrString;
     [attrString release];
 }
