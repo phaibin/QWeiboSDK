@@ -46,15 +46,15 @@ static NSOperationQueue *ATSharedOperationQueue() {
 @synthesize thumbnailImage = _thumbnailImage;
 @synthesize imageLoading;
 
-static NSDictionary *faceDictionary;
+static NSArray *faces;
 
-+ (NSDictionary *)sharedFaceDictionary
++ (NSArray *)sharedFaceArray
 {
-    if (!faceDictionary) {
+    if (!faces) {
         NSString *path = [[NSBundle mainBundle] pathForResource:@"face" ofType:@"plist"];
-        faceDictionary = [[NSDictionary dictionaryWithContentsOfFile:path] retain];
+        faces = [[NSArray arrayWithContentsOfFile:path] retain];
     }
-    return faceDictionary;
+    return faces;
 }
 
 - (NSString *)time
@@ -98,13 +98,13 @@ static NSDictionary *faceDictionary;
     
     //replace face image
     [attrString beginEditing];
-    NSDictionary *faceDic = [QWMessage sharedFaceDictionary];
-    for (NSString *key in faceDic) {
+    NSArray *faceArray = [QWMessage sharedFaceArray];
+    for (NSDictionary *dic in faceArray) {
         NSMutableString *innerString = [attrString mutableString];
-        NSRegularExpression *regexForFace = [NSRegularExpression regularExpressionWithPattern:key options:(NSRegularExpressionCaseInsensitive | NSRegularExpressionIgnoreMetacharacters) error:NULL];
+        NSRegularExpression *regexForFace = [NSRegularExpression regularExpressionWithPattern:[dic objectForKey:@"text"] options:(NSRegularExpressionCaseInsensitive | NSRegularExpressionIgnoreMetacharacters) error:NULL];
         NSArray *resultsFace = [regexForFace matchesInString:innerString options:0 range:NSMakeRange(0, [innerString length])];
         for (id result in [resultsFace reverseObjectEnumerator]) {
-            NSImage * pic = [NSImage imageNamed:[faceDic objectForKey:key]];
+            NSImage * pic = [NSImage imageNamed:[dic objectForKey:@"image"]];
             NSTextAttachmentCell *attachmentCell = [[NSTextAttachmentCell alloc] initImageCell:pic];
             NSTextAttachment *attachment = [[NSTextAttachment alloc] init];
             [attachment setAttachmentCell: attachmentCell ];
