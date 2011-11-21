@@ -44,6 +44,10 @@
 		3514F1481457A5580054812F /* NSImage+Categories.m in Sources */ = {isa = PBXBuildFile; fileRef = 3514F1461457A5580054812F /* NSImage+Categories.m */; };
 		3514F14B1457A58F0054812F /* NSDate+Categories.h in Headers */ = {isa = PBXBuildFile; fileRef = 3514F1491457A58F0054812F /* NSDate+Categories.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		3514F14C1457A58F0054812F /* NSDate+Categories.m in Sources */ = {isa = PBXBuildFile; fileRef = 3514F14A1457A58F0054812F /* NSDate+Categories.m */; };
+		351E7DC0147A35EF005C57C6 /* GTMNSString+HTML.h in Headers */ = {isa = PBXBuildFile; fileRef = 351E7DBC147A35EF005C57C6 /* GTMNSString+HTML.h */; };
+		351E7DC1147A35EF005C57C6 /* GTMNSString+HTML.m in Sources */ = {isa = PBXBuildFile; fileRef = 351E7DBD147A35EF005C57C6 /* GTMNSString+HTML.m */; };
+		351E7DC2147A35EF005C57C6 /* NSString+HTML.h in Headers */ = {isa = PBXBuildFile; fileRef = 351E7DBE147A35EF005C57C6 /* NSString+HTML.h */; };
+		351E7DC3147A35EF005C57C6 /* NSString+HTML.m in Sources */ = {isa = PBXBuildFile; fileRef = 351E7DBF147A35EF005C57C6 /* NSString+HTML.m */; };
 		35C6DFB11467B21100EF052F /* face.plist in Resources */ = {isa = PBXBuildFile; fileRef = 35C6DFB01467B21100EF052F /* face.plist */; };
 /* End PBXBuildFile section */
 
@@ -92,6 +96,10 @@
 		3514F1491457A58F0054812F /* NSDate+Categories.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDate+Categories.h"; sourceTree = "<group>"; };
 		3514F14A1457A58F0054812F /* NSDate+Categories.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDate+Categories.m"; sourceTree = "<group>"; };
 		3514F14D1457A5FA0054812F /* QWConstants.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QWConstants.h; sourceTree = "<group>"; };
+		351E7DBC147A35EF005C57C6 /* GTMNSString+HTML.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "GTMNSString+HTML.h"; sourceTree = "<group>"; };
+		351E7DBD147A35EF005C57C6 /* GTMNSString+HTML.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "GTMNSString+HTML.m"; sourceTree = "<group>"; };
+		351E7DBE147A35EF005C57C6 /* NSString+HTML.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+HTML.h"; sourceTree = "<group>"; };
+		351E7DBF147A35EF005C57C6 /* NSString+HTML.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+HTML.m"; sourceTree = "<group>"; };
 		35C6DFB01467B21100EF052F /* face.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = face.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -211,6 +219,10 @@
 				3514F1461457A5580054812F /* NSImage+Categories.m */,
 				3514F1491457A58F0054812F /* NSDate+Categories.h */,
 				3514F14A1457A58F0054812F /* NSDate+Categories.m */,
+				351E7DBC147A35EF005C57C6 /* GTMNSString+HTML.h */,
+				351E7DBD147A35EF005C57C6 /* GTMNSString+HTML.m */,
+				351E7DBE147A35EF005C57C6 /* NSString+HTML.h */,
+				351E7DBF147A35EF005C57C6 /* NSString+HTML.m */,
 			);
 			name = Categories;
 			sourceTree = "<group>";
@@ -239,6 +251,8 @@
 				3514F1471457A5580054812F /* NSImage+Categories.h in Headers */,
 				3514F14B1457A58F0054812F /* NSDate+Categories.h in Headers */,
 				3514F11A1457A2C00054812F /* QWeiboRequest.h in Headers */,
+				351E7DC0147A35EF005C57C6 /* GTMNSString+HTML.h in Headers */,
+				351E7DC2147A35EF005C57C6 /* NSString+HTML.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -322,6 +336,8 @@
 				3514F1441457A5370054812F /* NSObject+Universal.m in Sources */,
 				3514F1481457A5580054812F /* NSImage+Categories.m in Sources */,
 				3514F14C1457A58F0054812F /* NSDate+Categories.m in Sources */,
+				351E7DC1147A35EF005C57C6 /* GTMNSString+HTML.m in Sources */,
+				351E7DC3147A35EF005C57C6 /* NSString+HTML.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

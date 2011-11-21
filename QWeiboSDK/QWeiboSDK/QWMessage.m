@@ -10,6 +10,7 @@
 #import "NSAttributedString+Hyperlink.h"
 #import "NSImage+Categories.h"
 #import "NSDate+Categories.h"
+#import "NSString+HTML.h"
 
 @interface QWMessage ()
 
@@ -194,7 +195,7 @@ static NSArray *faces;
     NSString *head = [dict objectForKey:@"head"];
     if (head && ![head isEqualToString:@""])
         head = [head stringByAppendingPathComponent:@"50"];
-    NSString *text = [[dict objectForKey:@"text"] stringByTrimmingCharactersInSet:[NSCharacterSet whitespaceAndNewlineCharacterSet]];
+    NSString *text = [[[dict objectForKey:@"text"] stringByTrimmingCharactersInSet:[NSCharacterSet whitespaceAndNewlineCharacterSet]] stringByDecodingHTMLEntities];
     NSString *origText = [[text copy] autorelease];
     double timestamp = [[dict objectForKey:@"timestamp"] doubleValue];
     NSString *image = @"";
