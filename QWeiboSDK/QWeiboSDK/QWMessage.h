@@ -14,9 +14,11 @@
 //int type
 
 typedef enum {
-    QWMessageTypeOriginal,
-    QWMessageTypeRetweet,
-    QWMessageTypeReply
+    QWMessageTypeOriginal=1,//原创
+    QWMessageTypeRetweet=2,//转播
+    QWMessageTypePrivateMessage=3,//私信
+    QWMessageTypeDialog=4,//回复
+    QWMessageTypeReply=7,//评论
 } QWMessageType;
 
 #define ATEntityPropertyNamedFullImage          @"fullImage"
