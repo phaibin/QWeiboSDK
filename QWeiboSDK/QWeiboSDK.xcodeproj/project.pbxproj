@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		351140F814947DD000B0263C /* NIFLog.h in Headers */ = {isa = PBXBuildFile; fileRef = 351140F714947DD000B0263C /* NIFLog.h */; };
 		3514F0E31457A0F50054812F /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3514F0E21457A0F50054812F /* Cocoa.framework */; };
 		3514F0ED1457A0F50054812F /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 3514F0EB1457A0F50054812F /* InfoPlist.strings */; };
 		3514F10A1457A2C00054812F /* NSData+QBase64.h in Headers */ = {isa = PBXBuildFile; fileRef = 3514F0F81457A2C00054812F /* NSData+QBase64.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -52,6 +53,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		351140F714947DD000B0263C /* NIFLog.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NIFLog.h; sourceTree = "<group>"; };
 		3514F0DF1457A0F50054812F /* QWeiboSDK.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = QWeiboSDK.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		3514F0E21457A0F50054812F /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
 		3514F0E51457A0F50054812F /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = System/Library/Frameworks/AppKit.framework; sourceTree = SDKROOT; };
@@ -188,6 +190,7 @@
 		3514F0E91457A0F50054812F /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				351140F714947DD000B0263C /* NIFLog.h */,
 				35C6DFB01467B21100EF052F /* face.plist */,
 				3514F14D1457A5FA0054812F /* QWConstants.h */,
 				3514F0EA1457A0F50054812F /* QWeiboSDK-Info.plist */,
@@ -253,6 +256,7 @@
 				3514F11A1457A2C00054812F /* QWeiboRequest.h in Headers */,
 				351E7DC0147A35EF005C57C6 /* GTMNSString+HTML.h in Headers */,
 				351E7DC2147A35EF005C57C6 /* NSString+HTML.h in Headers */,
+				351140F814947DD000B0263C /* NIFLog.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

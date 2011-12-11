@@ -21,7 +21,7 @@
 	if (aQueryString) {
 		[url appendFormat:@"?%@", aQueryString];
 	}
-	NSLog(@"request url: %@", url);
+	NIF_TRACE(@"request url: %@", url);
 	NSMutableURLRequest *request = [[[NSMutableURLRequest alloc] initWithURL:[NSURL smartURLForString:url]] autorelease];
 	[request setHTTPMethod:@"GET"];
 	[request setTimeoutInterval:20.0f];

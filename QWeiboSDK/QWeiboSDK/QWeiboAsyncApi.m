@@ -11,13 +11,15 @@
 #import "QOauthKey.h"
 #import "QweiboRequest.h"
 #import "QWPerson.h"
+#import <YAJL/YAJL.h>
 
 @interface QWeiboAsyncApi()
 
-- (void)getUpdateCount:(BOOL)reset udpateType:(UpdateType)updateType;
+- (int)getUpdateCount:(BOOL)reset;
+- (NSString *)getDataSyncWithURL:(NSString *)url Parameters:(NSMutableDictionary *)parameters;
 - (void)getDataWithURL:(NSString *)url Parameters:(NSMutableDictionary *)parameters delegate:(id)aDelegate tag:(JSONURLConnectionTag)tag;
 - (void)postDataWithURL:(NSString *)url Parameters:(NSMutableDictionary *)parameters Files:(NSDictionary *)files delegate:(id)aDelegate tag:(JSONURLConnectionTag)tag;
-- (void)getTweetsWithTweetType:(TweetType)tweetType pageFlag:(PageFlag)pageFlag pageSize:(int)pageSize pageTime:(double)pageTime userName:(NSString *)userName tag:(JSONURLConnectionTag)tag;
+- (void)getTweetsWithPageFlag:(PageFlag)pageFlag pageSize:(int)pageSize pageTime:(double)pageTime userName:(NSString *)userName tag:(JSONURLConnectionTag)tag;
 
 @end
 
@@ -25,6 +27,7 @@
 
 @synthesize appKey = _appKey;
 @synthesize appSecret = _appSecret;
+@synthesize tweetType = _tweetType;
 @synthesize delegate = _delegate;
 
 - (id)initWithAppKey:(NSString *)appKey AppSecret:(NSString *)appSecret
@@ -75,25 +78,25 @@
 	return retString;
 }
 
-- (void)getLastTweetsWithTweetType:(TweetType)tweetType pageSize:(int)pageSize userName:(NSString *)userName
+- (void)getLastTweetsWithPageSize:(int)pageSize userName:(NSString *)userName
 {
-    [self getTweetsWithTweetType:tweetType pageFlag:PageFlagLast pageSize:pageSize pageTime:0 userName:userName tag:JSONURLConnectionTagGetLastTweets];
+    [self getTweetsWithPageFlag:PageFlagLast pageSize:pageSize pageTime:0 userName:userName tag:JSONURLConnectionTagGetLastTweets];
 }
 
-- (void)getOlderTweetsWithTweetType:(TweetType)tweetType pageSize:(int)pageSize pageTime:(double)pageTime userName:(NSString *)userName
+- (void)getOlderTweetsWithPageSize:(int)pageSize pageTime:(double)pageTime userName:(NSString *)userName
 {
     if (pageTime == 0)
-        [self getTweetsWithTweetType:tweetType pageFlag:PageFlagLast pageSize:pageSize pageTime:0 userName:userName tag:JSONURLConnectionTagGetOlderTweets];
+        [self getTweetsWithPageFlag:PageFlagLast pageSize:pageSize pageTime:0 userName:userName tag:JSONURLConnectionTagGetOlderTweets];
     else
-        [self getTweetsWithTweetType:tweetType pageFlag:PageFlagOlder pageSize:pageSize pageTime:pageTime userName:userName tag:JSONURLConnectionTagGetOlderTweets];
+        [self getTweetsWithPageFlag:PageFlagOlder pageSize:pageSize pageTime:pageTime userName:userName tag:JSONURLConnectionTagGetOlderTweets];
 }
 
-- (void)getNewerTweetsWithTweetType:(TweetType)tweetType pageSize:(int)pageSize pageTime:(double)pageTime userName:(NSString *)userName
+- (void)getNewerTweetsWithPageSize:(int)pageSize pageTime:(double)pageTime userName:(NSString *)userName
 {
     if (pageTime == 0)
-        [self getTweetsWithTweetType:tweetType pageFlag:PageFlagLast pageSize:pageSize pageTime:0 userName:userName tag:JSONURLConnectionTagGetNewerTweets];
+        [self getTweetsWithPageFlag:PageFlagLast pageSize:pageSize pageTime:0 userName:userName tag:JSONURLConnectionTagGetNewerTweets];
     else
-        [self getTweetsWithTweetType:tweetType pageFlag:PageFlagNewer pageSize:pageSize pageTime:pageTime userName:userName tag:JSONURLConnectionTagGetNewerTweets];
+        [self getTweetsWithPageFlag:PageFlagNewer pageSize:pageSize pageTime:pageTime userName:userName tag:JSONURLConnectionTagGetNewerTweets];
 }
 
 - (void)getPublicTimelineWithPos:(int)pos pageSize:(int)pageSize
@@ -110,10 +113,10 @@
     [self getDataWithURL:url Parameters:parameters delegate:self tag:tag];
 }
 
-- (void)getTweetsWithTweetType:(TweetType)tweetType pageFlag:(PageFlag)pageFlag pageSize:(int)pageSize pageTime:(double)pageTime userName:(NSString *)userName tag:(JSONURLConnectionTag)tag
+- (void)getTweetsWithPageFlag:(PageFlag)pageFlag pageSize:(int)pageSize pageTime:(double)pageTime userName:(NSString *)userName tag:(JSONURLConnectionTag)tag
 {
     NSString *url;
-    switch (tweetType) {
+    switch (self.tweetType) {
         case TweetTypeTimeline: {
             url = GET_TIMELINE_URL;
             break;
@@ -157,17 +160,37 @@
     [self getDataWithURL:url Parameters:parameters delegate:self tag:JSONURLConnectionTagGetUserInfo];
 }
 
-- (void)getUpdateCount:(BOOL)reset udpateType:(UpdateType)updateType
+- (int)getUpdateCount:(BOOL)reset
 {
+    int updateCount;
     NSString *url = GET_UPDATE_COUNT_URL;
     NSMutableDictionary *parameters = [NSMutableDictionary dictionary];
-    int op = 0;
-    if (reset) {
-        [parameters setObject:[NSString stringWithFormat:@"%d", updateType] forKey:@"type"];
-        op = 1;
+    [parameters setObject:[NSString stringWithFormat:@"%d", 0] forKey:@"op"];
+    [parameters setObject:[NSString stringWithFormat:@"%d", 0] forKey:@"type"];
+    NSDictionary *result = [[self getDataSyncWithURL:url Parameters:parameters] yajl_JSON];
+    switch (self.tweetType) {
+        case TweetTypeTimeline:
+            updateCount = [[result valueForKeyPath:@"data.home"] intValue];
+            break;
+        case TweetTypeMethions:
+            updateCount = [[result valueForKeyPath:@"data.mentions"] intValue];
+            break;
+        case TweetTypeMessages:
+            updateCount = [[result valueForKeyPath:@"data.private"] intValue];
+            break;
+        default:
+            updateCount = 0;
+            break;
     }
-    [parameters setObject:[NSString stringWithFormat:@"%d", op] forKey:@"op"];
-    [self getDataWithURL:url Parameters:parameters delegate:self tag:JSONURLConnectionTagGetUpdateCount];
+    
+    if (reset) {
+        parameters = [NSMutableDictionary dictionary];
+        [parameters setObject:[NSString stringWithFormat:@"%d", 1] forKey:@"op"];
+        [parameters setObject:[NSString stringWithFormat:@"%d", self.tweetType] forKey:@"type"];
+        [self getDataSyncWithURL:url Parameters:parameters];
+    }
+    
+    return updateCount;
 }
 
 - (void)publishMessage:(NSString *)message
@@ -216,6 +239,25 @@
     NSMutableDictionary *parameters = [NSMutableDictionary dictionary];
     [parameters setObject:tweetId forKey:@"id"];
     [self postDataWithURL:url Parameters:parameters Files:nil delegate:self tag:JSONURLConnectionTagDeleteFavorite];
+}
+
+- (NSString *)getDataSyncWithURL:(NSString *)url Parameters:(NSMutableDictionary *)parameters
+{
+    NSString *accessToken = [[NSUserDefaults standardUserDefaults] stringForKey:ACCESS_TOKEN_KEY];
+    NSString *accessTokenSecret = [[NSUserDefaults standardUserDefaults] stringForKey:ACCESS_TOKEN_SECRET_KEY];
+	QOauthKey *oauthKey = [[QOauthKey alloc] init];
+	oauthKey.consumerKey = self.appKey;
+	oauthKey.consumerSecret = self.appSecret;
+	oauthKey.tokenKey = accessToken;
+	oauthKey.tokenSecret= accessTokenSecret;
+	
+	[parameters setObject:@"json" forKey:@"format"];
+
+	QWeiboRequest *request = [[QWeiboRequest alloc] init];
+	NSString *result = [request syncRequestWithUrl:url httpMethod:@"GET" oauthKey:oauthKey parameters:parameters files:nil];
+	[request release];
+	[oauthKey release];
+    return result;
 }
 
 - (void)getDataWithURL:(NSString *)url Parameters:(NSMutableDictionary *)parameters delegate:(id)aDelegate tag:(JSONURLConnectionTag)tag
@@ -270,11 +312,15 @@
     switch (connection.connectionTag) {
         case JSONURLConnectionTagGetLastTweets:
         {
+            int updateCount = [self getUpdateCount:YES];
             NSMutableArray *messages = [[NSMutableArray alloc] init];
             NSDictionary *userInfo = nil;
             if ([json valueForKeyPath:@"data"] != [NSNull null]) {
                 for (NSDictionary *dict in [json valueForKeyPath:@"data.info"]) {
                     QWMessage *message = [[QWMessage alloc] initWithJSON:dict];
+                    if (updateCount > 0)
+                        message.isNew = YES;
+                    updateCount--;
                     [messages addObject:message];
                     [message release];
                 }
@@ -371,27 +417,10 @@
     connection = nil;
 }
 
-- (void)beginUpdating
-{
-    timer = [NSTimer scheduledTimerWithTimeInterval:UPDATE_INTERVAL_TIMELINE target:self selector:@selector(timerMethod) userInfo:nil repeats:YES];
-    [timer fire];
-}
-
-- (void)timerMethod
-{
-    [self getUpdateCount:NO udpateType:UpdateTypeAll];
-}
-
-- (void)stopUpdating
-{
-    [timer invalidate];
-}
-
 - (void)dealloc
 {
     [_appKey release];
     [_appSecret release];
-    [self stopUpdating];
     for (JSONURLConnection *conn in connectionList) {
         [conn cancelConnection];
     }
