@@ -61,7 +61,10 @@
 	NSDictionary *jsonValue = nil;
 	
 	@try {
-		jsonValue = [self.buffer yajl_JSON];
+        NSString *s = [[NSString alloc] initWithData:self.buffer encoding:NSUTF8StringEncoding];
+        NSString *jsonString = [s stringByReplacingOccurrencesOfString:@"" withString:@""];
+        [s release];
+		jsonValue = [jsonString yajl_JSON];
 	}
 	@catch (NSException * e) {
 		if (e) {
