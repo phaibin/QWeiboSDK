@@ -20,6 +20,7 @@
 - (void)getDataWithURL:(NSString *)url Parameters:(NSMutableDictionary *)parameters delegate:(id)aDelegate tag:(JSONURLConnectionTag)tag;
 - (void)postDataWithURL:(NSString *)url Parameters:(NSMutableDictionary *)parameters Files:(NSDictionary *)files delegate:(id)aDelegate tag:(JSONURLConnectionTag)tag;
 - (void)getTweetsWithPageFlag:(PageFlag)pageFlag pageSize:(int)pageSize pageTime:(double)pageTime userName:(NSString *)userName tag:(JSONURLConnectionTag)tag;
+- (void)getTweetsWithPageFlag:(PageFlag)pageFlag pageSize:(int)pageSize pageTime:(double)pageTime lastId:(NSString *)lastId userName:(NSString *)userName tag:(JSONURLConnectionTag)tag;
 
 @end
 
@@ -91,12 +92,12 @@
         [self getTweetsWithPageFlag:PageFlagOlder pageSize:pageSize pageTime:pageTime userName:userName tag:JSONURLConnectionTagGetOlderTweets];
 }
 
-- (void)getNewerTweetsWithPageSize:(int)pageSize pageTime:(double)pageTime userName:(NSString *)userName
+- (void)getNewerTweetsWithPageSize:(int)pageSize pageTime:(double)pageTime lastId:(NSString *)lastId userName:(NSString *)userName
 {
     if (pageTime == 0)
         [self getTweetsWithPageFlag:PageFlagLast pageSize:pageSize pageTime:0 userName:userName tag:JSONURLConnectionTagGetNewerTweets];
     else
-        [self getTweetsWithPageFlag:PageFlagNewer pageSize:pageSize pageTime:pageTime userName:userName tag:JSONURLConnectionTagGetNewerTweets];
+        [self getTweetsWithPageFlag:PageFlagNewer pageSize:pageSize pageTime:pageTime lastId:lastId userName:userName tag:JSONURLConnectionTagGetNewerTweets];
 }
 
 - (void)getPublicTimelineWithPos:(int)pos pageSize:(int)pageSize
@@ -114,6 +115,11 @@
 }
 
 - (void)getTweetsWithPageFlag:(PageFlag)pageFlag pageSize:(int)pageSize pageTime:(double)pageTime userName:(NSString *)userName tag:(JSONURLConnectionTag)tag
+{
+    [self getTweetsWithPageFlag:pageFlag pageSize:pageSize pageTime:pageTime lastId:@"0" userName:userName tag:tag];
+}
+
+- (void)getTweetsWithPageFlag:(PageFlag)pageFlag pageSize:(int)pageSize pageTime:(double)pageTime lastId:(NSString *)lastId userName:(NSString *)userName tag:(JSONURLConnectionTag)tag
 {
     NSString *url;
     switch (self.tweetType) {
@@ -148,6 +154,7 @@
 	[parameters setObject:[NSString stringWithFormat:@"%d", pageFlag] forKey:@"pageflag"];
 	[parameters setObject:[NSString stringWithFormat:@"%d", pageSize] forKey:@"reqnum"];
     [parameters setObject:[NSString stringWithFormat:@"%.f", pageTime] forKey:@"pagetime"];
+    [parameters setObject:lastId forKey:@"lastid"];
     if (userName && ![userName isEqualToString:@""])
         [parameters setObject:userName forKey:@"name"];
     [self getDataWithURL:url Parameters:parameters delegate:self tag:tag];

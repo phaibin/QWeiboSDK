@@ -64,7 +64,7 @@ typedef enum {
 - (NSString *)getAccessTokenWithRequestTokenKey:(NSString *)aRequestTokenKey requestTokenSecret:(NSString *)aRequestTokenSecret verify:(NSString *)aVerify;
 - (void)getLastTweetsWithPageSize:(int)pageSize userName:(NSString *)userName;
 - (void)getOlderTweetsWithPageSize:(int)pageSize pageTime:(double)pageTime userName:(NSString *)userName;
-- (void)getNewerTweetsWithPageSize:(int)pageSize pageTime:(double)pageTime userName:(NSString *)userName;
+- (void)getNewerTweetsWithPageSize:(int)pageSize pageTime:(double)pageTime lastId:(NSString *)lastId userName:(NSString *)userName;
 - (void)getPublicTimelineWithPos:(int)pos pageSize:(int)pageSize;
 - (void)getUserInfo;
 - (void)publishMessage:(NSString *)message;
